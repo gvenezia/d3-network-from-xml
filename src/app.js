@@ -88,7 +88,7 @@ var simulation = d3.forceSimulation()
     .on("tick", ticked)
     .stop();
 
-d3.xml("data/farmers-fridge.xml", (error, coggle) => {
+d3.xml("data/nested-nodes.xml", (error, coggle) => {
   if (error) throw error;
 
   let xmlNodes = d3.select(coggle)
