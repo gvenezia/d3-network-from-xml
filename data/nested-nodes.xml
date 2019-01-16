@@ -1,0 +1,207 @@
+
+<map version="0.9.0">
+    <node TEXT="Node1" FOLDED="false" POSITION="right" ID="5c1032a1e2b2f65bb8a540ac" X_COGGLE_POSX="-209" X_COGGLE_POSY="-191">
+        <edge COLOR="#b4b4b4"/>
+        <font NAME="Helvetica" SIZE="18"/>
+        <node TEXT="Node1.1" FOLDED="false" POSITION="right" ID="d1fa295acadff01a7d3141be84a23439">
+            <edge COLOR="#b0b0b0"/>
+            <font NAME="Helvetica" SIZE="20"/>
+        </node>
+    </node>
+    <x-coggle-rootnode TEXT="Node2" FOLDED="false" POSITION="right" ID="67157040892b935c56999c999a0e57e1" X_COGGLE_POSX="-405" X_COGGLE_POSY="-178">
+        <edge COLOR="#b4b4b4"/>
+        <font NAME="Helvetica" SIZE="17"/>
+    </x-coggle-rootnode>
+    <x-coggle-rootnode TEXT="Node3" FOLDED="false" POSITION="right" ID="553ecf8f6cda4b3648bbc0a03af35a9a" X_COGGLE_POSX="-331" X_COGGLE_POSY="29">
+        <edge COLOR="#67d7c4"/>
+        <font NAME="Helvetica" SIZE="17"/>
+        <node TEXT="Node4" FOLDED="false" POSITION="left" ID="70887b3a75d17815de561abd3480174a">
+            <edge COLOR="#62d4bf"/>
+            <font NAME="Helvetica" SIZE="17"/>
+            <node TEXT="Node5" FOLDED="false" POSITION="left" ID="38d90e726b34ce7b74220c6440dbd617">
+                <edge COLOR="#67d7c4"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="Node6" FOLDED="false" POSITION="right" ID="cd570ad36a17f864c4619d8ff165dac5">
+                    <edge COLOR="#5fd5bf"/>
+                    <font NAME="Helvetica" SIZE="23"/>
+                </node>
+            </node>
+            <node TEXT="Node7" FOLDED="false" POSITION="right" ID="bda33dee9d0d5fe61df9b1629b13bdc2">
+                <edge COLOR="#7aa3e5"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="" FOLDED="false" POSITION="left" ID="d42bbf6de2dd7ae75bbcb5894f999b46" X_COGGLE_JOINEDTO="cd570ad36a17f864c4619d8ff165dac5">
+                    <edge COLOR="#75a2e6"/>
+                    <font NAME="Helvetica" SIZE="17"/>
+                </node>
+            </node>
+        </node>
+        <node TEXT="Node8" FOLDED="false" POSITION="right" ID="61fc086c0ec992a690808a5d819f000a">
+            <edge COLOR="#b4b4b4"/>
+            <font NAME="Helvetica" SIZE="15"/>
+            <node TEXT="Node9" FOLDED="false" POSITION="right" ID="563d64653bcfde36e69fac51b5a7b60c">
+                <edge COLOR="#c6c097"/>
+                <font NAME="Helvetica" SIZE="13"/>
+                <node TEXT="" FOLDED="false" POSITION="left" ID="dacaf2cd24ba06117219570ae4b54726" X_COGGLE_JOINEDTO="957b8f22afe83eaa054137d45ae56b64">
+                    <edge COLOR="#c1bb92"/>
+                    <font NAME="Helvetica" SIZE="13"/>
+                </node>
+            </node>
+            <node TEXT="Node10" FOLDED="false" POSITION="right" ID="0de0ac2f649bd6dc89c342ff5b3094e2">
+                <edge COLOR="#c6c097"/>
+                <font NAME="Helvetica" SIZE="13"/>
+                <node TEXT="" FOLDED="false" POSITION="left" ID="5170e81e9dc1ddc213a4d3c45106c203" X_COGGLE_JOINEDTO="957b8f22afe83eaa054137d45ae56b64">
+                    <edge COLOR="#c9c298"/>
+                    <font NAME="Helvetica" SIZE="13"/>
+                </node>
+            </node>
+            <node TEXT="" FOLDED="false" POSITION="right" ID="eedf56660a64bcc06656a8e2f2ded114" X_COGGLE_JOINEDTO="957b8f22afe83eaa054137d45ae56b64">
+                <edge COLOR="#afafaf"/>
+                <font NAME="Helvetica" SIZE="15"/>
+            </node>
+        </node>
+    </x-coggle-rootnode>
+    <x-coggle-rootnode TEXT="Node11" FOLDED="false" POSITION="right" ID="63f03630a2552eb511619e20d96b7a10" X_COGGLE_POSX="261" X_COGGLE_POSY="95">
+        <edge COLOR="#b4b4b4"/>
+        <font NAME="Helvetica" SIZE="17"/>
+        <node TEXT="Node12" FOLDED="false" POSITION="right" ID="ddeb3847a9c1af936164606005ad4193">
+            <edge COLOR="#efa670"/>
+            <font NAME="Helvetica" SIZE="17"/>
+            <node TEXT="Node13" FOLDED="false" POSITION="right" ID="58793491e213c2effa585fb83620f1d4">
+                <edge COLOR="#efa06a"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="" FOLDED="false" POSITION="left" ID="f8a187282427f0f77e4d353e7926f730" X_COGGLE_JOINEDTO="1607c9ff5dd36850e31f298c5e0bb3d4">
+                    <edge COLOR="#c6b38e"/>
+                    <font NAME="Helvetica" SIZE="17"/>
+                </node>
+            </node>
+        </node>
+        <node TEXT="Node14" FOLDED="false" POSITION="right" ID="affaa12a395ab4db1185646b22cd6081">
+            <edge COLOR="#67d7c4"/>
+            <font NAME="Helvetica" SIZE="15"/>
+            <node TEXT="" FOLDED="false" POSITION="right" ID="237e6f26e44fffaf006761a8cc6dede4" X_COGGLE_JOINEDTO="58793491e213c2effa585fb83620f1d4">
+                <edge COLOR="#68d6c1"/>
+                <font NAME="Helvetica" SIZE="15"/>
+            </node>
+        </node>
+        <node TEXT="Node15" FOLDED="false" POSITION="right" ID="618e0247387247a973e6fa401fb20805">
+            <edge COLOR="#ebd95f"/>
+            <font NAME="Helvetica" SIZE="17"/>
+            <node TEXT="" FOLDED="false" POSITION="right" ID="81afa57a7862be17141b4fd382b7c5ca" X_COGGLE_JOINEDTO="58793491e213c2effa585fb83620f1d4">
+                <edge COLOR="#ebd553"/>
+                <font NAME="Helvetica" SIZE="17"/>
+            </node>
+        </node>
+        <node TEXT="Node16" FOLDED="false" POSITION="left" ID="01afe159e8ba1c69f7c8bd5f3fbef34b">
+            <edge COLOR="#7aa3e5"/>
+            <font NAME="Helvetica" SIZE="15"/>
+            <node TEXT="Node17" FOLDED="false" POSITION="right" ID="e0bc5110d3fdf94b8830e92a194652f1">
+                <edge COLOR="#78a3e3"/>
+                <font NAME="Helvetica" SIZE="15"/>
+            </node>
+            <node TEXT="Node18" FOLDED="false" POSITION="left" ID="dbb516fb860afe7856aa499a46e9eb7b">
+                <edge COLOR="#72a0e5"/>
+                <font NAME="Helvetica" SIZE="15"/>
+            </node>
+        </node>
+        <node TEXT="Node19" FOLDED="false" POSITION="right" ID="0b18c049e8557ccbb73e5802a9ef61c1">
+            <edge COLOR="#e68782"/>
+            <font NAME="Helvetica" SIZE="17"/>
+            <node TEXT="" FOLDED="false" POSITION="right" ID="b4cf3678e09cc5a8c97e315521290f97" X_COGGLE_JOINEDTO="58793491e213c2effa585fb83620f1d4">
+                <edge COLOR="#e68582"/>
+                <font NAME="Helvetica" SIZE="17"/>
+            </node>
+        </node>
+        <node TEXT="Node20" FOLDED="false" POSITION="right" ID="a056616d8a12049c686648b802ed9fb2">
+            <edge COLOR="#e096e9"/>
+            <font NAME="Helvetica" SIZE="17"/>
+            <node TEXT="" FOLDED="false" POSITION="right" ID="89e8a30c53f4b046e4461dcc1166d889" X_COGGLE_JOINEDTO="58793491e213c2effa585fb83620f1d4">
+                <edge COLOR="#de8ee9"/>
+                <font NAME="Helvetica" SIZE="17"/>
+            </node>
+        </node>
+        <node TEXT="Node21" FOLDED="false" POSITION="right" ID="9a0e26fd587b14299979462465a601a8">
+            <edge COLOR="#9ed56b"/>
+            <font NAME="Helvetica" SIZE="17"/>
+            <node TEXT="" FOLDED="false" POSITION="right" ID="beb2695cecdb1c4dc4d5c623f28c78c3" X_COGGLE_JOINEDTO="58793491e213c2effa585fb83620f1d4">
+                <edge COLOR="#9fd36b"/>
+                <font NAME="Helvetica" SIZE="17"/>
+            </node>
+        </node>
+    </x-coggle-rootnode>
+    <x-coggle-rootnode TEXT="Node22" FOLDED="false" POSITION="right" ID="b1c4f0fbf92f7d4230fbbf802d9c3e85" X_COGGLE_POSX="-195" X_COGGLE_POSY="103">
+        <edge COLOR="#b4b2b2"/>
+        <font NAME="Helvetica" SIZE="17"/>
+        <node TEXT="" FOLDED="false" POSITION="right" ID="20f5b4261208afddaf8aa0aacef35fe7" X_COGGLE_JOINEDTO="61fc086c0ec992a690808a5d819f000a">
+            <edge COLOR="#b4b2b2"/>
+            <font NAME="Helvetica" SIZE="15"/>
+        </node>
+        <node TEXT="" FOLDED="false" POSITION="right" ID="cd80dd78eaff9e6be04f6922a17cc018" X_COGGLE_JOINEDTO="61fc086c0ec992a690808a5d819f000a">
+            <edge COLOR="#ebd95f"/>
+            <font NAME="Helvetica" SIZE="15"/>
+        </node>
+        <node TEXT="Node23" FOLDED="false" POSITION="right" ID="957b8f22afe83eaa054137d45ae56b64">
+            <edge COLOR="#7aa3e5"/>
+            <font NAME="Helvetica" SIZE="17"/>
+            <node TEXT="Node23.1" FOLDED="false" POSITION="right" ID="04961ef4a490827324e51ab897443de1">
+                <edge COLOR="#7ba5e4"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="Node24" FOLDED="false" POSITION="right" ID="1607c9ff5dd36850e31f298c5e0bb3d4">
+                    <edge COLOR="#7aa5e1"/>
+                    <font NAME="Helvetica" SIZE="17"/>
+                    <node TEXT="" FOLDED="false" POSITION="left" ID="65c65856c9f9bcd8d3419f2111a9d8ef" X_COGGLE_JOINEDTO="70887b3a75d17815de561abd3480174a">
+                        <edge COLOR="#81abe6"/>
+                        <font NAME="Helvetica" SIZE="17"/>
+                    </node>
+                </node>
+            </node>
+            <node TEXT="Node25" FOLDED="false" POSITION="right" ID="e16255efee2995c510f3a1e7dfd98f9a">
+                <edge COLOR="#78a4e5"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="" FOLDED="false" POSITION="right" ID="9f6f9e815a818baab06f068e2535c15f" X_COGGLE_JOINEDTO="1607c9ff5dd36850e31f298c5e0bb3d4">
+                    <edge COLOR="#80abe7"/>
+                    <font NAME="Helvetica" SIZE="17"/>
+                </node>
+            </node>
+            <node TEXT="Node26" FOLDED="false" POSITION="right" ID="b59c4461328d588468b05280551752d8">
+                <edge COLOR="#7fa9e8"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="" FOLDED="false" POSITION="right" ID="094e4d6c3eba368255a8349566f8a5a2" X_COGGLE_JOINEDTO="1607c9ff5dd36850e31f298c5e0bb3d4">
+                    <edge COLOR="#88b0e9"/>
+                    <font NAME="Helvetica" SIZE="17"/>
+                </node>
+            </node>
+            <node TEXT="Node27" FOLDED="false" POSITION="right" ID="f7595436f845603d63e4ed86adbe3583">
+                <edge COLOR="#75bed6"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="" FOLDED="false" POSITION="left" ID="57d837f66a3667d0006521a3279a4bea" X_COGGLE_JOINEDTO="77e15bd31d7f21b87f29fa9e1f5b0b7f">
+                    <edge COLOR="#74bdd3"/>
+                    <font NAME="Helvetica" SIZE="17"/>
+                </node>
+            </node>
+            <node TEXT="Node28" FOLDED="false" POSITION="left" ID="a77716383b4b168b0f4758a975dc19b1">
+                <edge COLOR="#7aa6e7"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="" FOLDED="false" POSITION="right" ID="2d0e581d80eb38d202871c0646c4cb8b" X_COGGLE_JOINEDTO="1607c9ff5dd36850e31f298c5e0bb3d4">
+                    <edge COLOR="#71a1e4"/>
+                    <font NAME="Helvetica" SIZE="17"/>
+                </node>
+            </node>
+            <node TEXT="Node29" FOLDED="false" POSITION="left" ID="c1757aeee2fc5343eea5ed7a255f307d">
+                <edge COLOR="#88b9c9"/>
+                <font NAME="Helvetica" SIZE="17"/>
+                <node TEXT="" FOLDED="false" POSITION="left" ID="cab2091298a864a50d40d892196caa01" X_COGGLE_JOINEDTO="a77716383b4b168b0f4758a975dc19b1">
+                    <edge COLOR="#7aa3e5"/>
+                    <font NAME="Helvetica" SIZE="15"/>
+                </node>
+            </node>
+        </node>
+        <node TEXT="Node30" FOLDED="false" POSITION="right" ID="77e15bd31d7f21b87f29fa9e1f5b0b7f">
+            <edge COLOR="#67d7c4"/>
+            <font NAME="Helvetica" SIZE="15"/>
+            <node TEXT="" FOLDED="false" POSITION="right" ID="10744ddb807d04165f40cb8371c19cbe" X_COGGLE_JOINEDTO="957b8f22afe83eaa054137d45ae56b64">
+                <edge COLOR="#70d9c6"/>
+                <font NAME="Helvetica" SIZE="15"/>
+            </node>
+        </node>
+    </x-coggle-rootnode>
+</map>

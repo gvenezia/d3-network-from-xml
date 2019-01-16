@@ -1,8 +1,13 @@
-const path = require('path')
-const webpack = require('webpack')
+require("@babel/register");
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
+
+const webpack = require('webpack');
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const paths = {
   src: path.join(__dirname, 'src'),
@@ -11,6 +16,7 @@ const paths = {
 }
 
 module.exports = {
+  mode: 'development',
   context: paths.src,
   entry: ['./app.js', './main.scss'],
   output: {
@@ -22,10 +28,12 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: [/node_modules/],
+        exclude: [/(node_modules|bower_components)/],
         use: [{
           loader: 'babel-loader',
-          options: { presets: ['es2015', 'stage-0'] },
+          options: {
+            "presets": ["@babel/preset-env"]
+          }
         }],
       },
       {
@@ -39,7 +47,6 @@ module.exports = {
   devServer: {
     contentBase: paths.dist,
     compress: true,
-    port: '4800',
     stats: 'errors-only',
   },
   plugins: [

@@ -1,40 +1,63 @@
 {
-  "name": "learn-d3",
+  "name": "d3-webpack-babel-boilerplate",
   "version": "1.0.0",
   "description": "Basic D3.js project for learning purposes",
   "main": "src/app.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --hot --inline --progress",
-    "build": "webpack -p --config webpack.config.js --hide-modules"
+    "build": "webpack -p --config webpack.config.babel.js --hide-modules"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willamesoares/learn-d3.git"
+    "url": "git+https://github.com/gvenezia/d3-network-from-xml.git"
   },
   "keywords": [
     "d3js"
   ],
-  "author": "Will Soares",
+  "author": "Gaetano Venezia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/willamesoares/learn-d3/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/willamesoares/learn-d3#readme",
+  "homepage": "",
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "ajv": "^6.6.1",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "script-ext-html-webpack-plugin": "^2.1.3",
     "style-loader": "^0.18.2",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1",
-    "copy-webpack-plugin": "^4.0.1"
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "d3": "^4.10.0"
+    "@babel/polyfill": "^7.0.0",
+    "d3": "^4.10.0",
+    "regl": "^1.3.9"
   }
 }
