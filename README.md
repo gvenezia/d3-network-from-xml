@@ -1,8 +1,19 @@
 # D3 Network from XML 
-A template for converting from [Coggle]() charts to D3 with lots of prebuilt functionality like particles to model flow, marker ends to show directionality, and helper functions for displacing the link's target side.  
+A template for converting from [Coggle](https://coggle.it/?lang=en-US) charts to D3 with lots of prebuilt functionality like particles to model flow, marker ends to show directionality, and helper functions for displacing the link's target side.  
 
-## D3 boilerplate 
-This project has been adapted from Willam Soares' webpack-babel setup, which you can find below under the next main heading. This version uses an updated version of webpack and babel.
+## D3 boilerplate  
+This project has been adapted from Willam Soares' webpack-babel setup, which you can find after the screenshot below. I've updated webpack, babel, all their associated packages, and the logic in `webpack.config.babel`. I've also optimized the project for my typical D3 setup.  
+
+## Main functionality
+This project is primarily about converting from a Coggle `.xml` file into something D3 can use.
+
+D3's method for creating network visualizations uses JSON format, so first I've converted the `.xml` into JSON format (although I haven't created an actual `.json` file). 
+
+
+## Extra Functionality
+- Particles: See [this simplified example](http://bl.ocks.org/gvenezia/e0e6d17dbf12dd6a7ea819ffe02c7aa1) I created for an explanation of how I've created the particle flows
+- Link end arrows (SVG marker-ends)
+- Link end displacement: The links are offset from their target node with a series of helper functions in `app.js`. The inline comments and links should explain everything going on.
 
 ***
 
