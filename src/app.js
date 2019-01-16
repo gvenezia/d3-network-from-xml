@@ -1,9 +1,8 @@
-;
-import * as d3 from 'd3';
+;import * as d3 from 'd3';
 
-// ======================================
-const graphRatio = .65;
+// ============== Variables ===================
 
+// Setup the graph container
 // DOM elements
 let graphContainer  = d3.select("#graph-container");
 let paddingContainer= d3.select('.padding-container');
@@ -18,35 +17,34 @@ let width = parseInt(graphContainer.style('width')),
 let d3W = width + margin.left + margin.right,
     d3H = height + margin.top + margin.bottom;
 
+// Checks for Retina and other high-res screens and configures accordingly
 let context = createProperResCanvas(d3W, d3H);
 
-// W/ Margin convention, set the SVG and G
+// Set the SVG and G (with Bostock's margin convention)
 const svg = graphContainer.append('svg')
                 .attr('width', d3W) // sets the viewport width
                 .attr('height', d3H) // sets the viewport height
               .append('g')
                 .attr('transform', `translate(${margin.left},${margin.top})`);
 
-var tooltip = d3.select("body").append("div")
+// Setup graph features
+let tooltip = d3.select("body").append("div")
               .attr("class", "tooltip");
-
-let numTest = /^-{0,1}\d*\.{0,1}\d+$/;
 
 const nodeRadius = 15;
 
+// Declare a function for scaling the with of the links based on the nodeRadius
 let linkScale = d3.scaleLinear()
       .domain([0,1])
       .range([1,nodeRadius])
 
+// Formats input to whole number
 let f = d3.format(".0f");
 
-// ----- End personal boilerplate -------
-
-// The following is based on Mike Bostock's block: 
-// https://bl.ocks.org/mbostock/1080941
-// var radius = d3.scaleSqrt()
-//     .domain([0, width])
-//     .range([0, 20]);
+// ========
+// The following code for setting up the graph and drawing with xml data
+// is based on Mike Bostock's block: https://bl.ocks.org/mbostock/1080941
+// ========
 
 var link = svg.append("g")
     .attr("class", "linkG")
@@ -149,15 +147,7 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
 
   links.forEach(link => {
         link.freq = link.transitionRate;
-        link.particleSize = 5 * link.transitionRate ;
-        link.particleColor = 'red';
-
-        // In original example, will inerpolate color between nodes
-        // d3.scaleLinear()
-        //                               .domain([0, 1])
-        //                                 .range(
-        //                                   [link.source.children[0].attributes.COLOR.nodeValue,
-        //                                    link.target.children[0].attributes.COLOR.nodeValue]);
+        link.particleSize = 5 * link.transitionRate;
       });
 
   // Both the actual nodes and the nodes on the links need to have a force in order to minimize collisions AND overlaps
@@ -170,23 +160,22 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
     .enter().append("svg:marker")  // This section adds in the arrows
       .attr("class", 'arrow')
       .attr('id', (d,i) => 'arrow' + i.toString() ) // Create a unique arrow for each link
+      // Use corresponding width to size dynamically and math svg path 
       .attr("viewBox", (d,i) => `0 -${d.width/2} ${+d.width + 1} ${d.width}`)
       .attr("refX", 0)
       .attr("refY", 0)
       .attr("markerWidth", 1)
       .attr("markerHeight", 1)
       .attr('markerUnits', 'strokeWidth')
-      // .attr('preserveAspectRatio', 'xMidyMid')
       .attr("orient", "auto")
     .append("svg:path")
       .attr("d", d => {
+        // Use corresponding width to size dynamically and match viewbox
         let w = d.width;
         return `M 0,0 m -${w},-${w} L ${w},0 L -${w},${w} Z`
       })
       .style('fill', (d,i) => linkColors[i])
       .style('stroke', (d,i) => linkColors[i]);
-
-  
 
   link = link.data(links)
             .enter()
@@ -196,14 +185,12 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
             .attr('stroke-width', d => d.width )
             .attr('stroke-linecap', 'butt')
             .attr('opacity', .5)
-            .attr("marker-end", (d,i) => `url(#arrow${i})`) // Use unique arrowhead with proper color 
+            .attr("marker-end", (d,i) => `url(#arrow${i})`) // Use unique arrowhead for proper color and size
             .style('fill', 'none');
 
   node = node.data(nodes)
       .enter()
       .append("circle")
-      // .style('stroke', 'white')
-      // .style('stroke-width', '2')
       .style('fill', d => {
         if (d.children.length > 0 && d.children[0].tagName === 'edge')
           return d.children[0].attributes.COLOR.nodeValue;
@@ -226,16 +213,13 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
       })
       .call(drag);
 
+  // Link between nodes helps prevent link crowding
   linkNode = linkNode.data(linkNodes)
       .enter().append("circle")
         .attr("class", "link-node")
         .attr("r", 3)
         .style("fill", "#ccc")
         .style('opacity', 0);
-
-  // Give the nodes a hover title based on the name of the xml node
-  node.append("title")
-      .text(function(d) { return d.tagName; });
 
   simulation.restart();
 });
@@ -288,6 +272,7 @@ function ticked() {
       .attr("cx", d => d.x = Math.max(margin.left, Math.min(width - margin.right, d.x)))
       .attr("cy", d => d.y = Math.max(margin.top, Math.min(height - margin.bottom, d.y)));
 
+  // Commented out portion present different path options
   link
       // Single curve <path>
       // .attr('d', linkArc);
@@ -386,7 +371,6 @@ function drawParticlePathOnCanvas(elapsed){
 
       // Draw the particles
       context.beginPath();
-      // context.fillStyle = particles[p].link.particleColor(0);
       context.arc( // creates a circle in canvas
         currentPos.x + margin.left, // Add particles[p].offset for displacement
         currentPos.y + margin.top,
