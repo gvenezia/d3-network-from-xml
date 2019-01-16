@@ -88,6 +88,7 @@ var simulation = d3.forceSimulation()
     .on("tick", ticked)
     .stop();
 
+// Note: d3@v5 wasn't working with a promise for d3.xml import
 d3.xml("data/nested-nodes.xml", (error, coggle) => {
   if (error) throw error;
 
@@ -95,8 +96,6 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
                   .selectAll("*")
                   .nodes()
                   .slice(1);
-
-  // console.log(xmlNodes);
 
   xmlNodes.forEach(d => {
     d.children[0]
@@ -109,13 +108,10 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
   let nodes = xmlNodes
         .filter(xmlNode => xmlNode.nodeName.match(/^node$|x-coggle-rootnode/) && xmlNode.attributes.TEXT.nodeValue );
 
-  // console.log(nodes);
-
   // Create d3 links with only the child nodes (so as to avoid linking to the parent 'map' XML object)
   let links = xmlNodes
         .filter(xmlNode => xmlNode.nodeName.match(/^node$/) && xmlNode.parentNode.nodeName !== 'map')
         .map(function(d) {
-          // console.log(d.parentNode.nodeName !== 'map');
           if(d.attributes.TEXT.nodeValue !== '') {
             return {source: d.parentNode, target: d};
 
@@ -143,8 +139,6 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
       );
   });
 
-  // console.log(links);
-
   let linkNodes = [];
   links.forEach(link => {
     linkNodes.push({
@@ -154,11 +148,11 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
   });
 
   links.forEach(link => {
-    // console.log(link);
         link.freq = link.transitionRate;
         link.particleSize = 5 * link.transitionRate ;
         link.particleColor = 'red';
 
+        // In original example, will inerpolate color between nodes
         // d3.scaleLinear()
         //                               .domain([0, 1])
         //                                 .range(
@@ -169,8 +163,6 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
   // Both the actual nodes and the nodes on the links need to have a force in order to minimize collisions AND overlaps
   simulation.nodes(nodes.concat(linkNodes));
   simulation.force("link", d3.forceLink(links));
-  
-  // console.log(linkNodes);
 
   // Directional arrow for links
   svg.append("svg:defs").selectAll("marker")
@@ -246,8 +238,6 @@ d3.xml("data/nested-nodes.xml", (error, coggle) => {
       .text(function(d) { return d.tagName; });
 
   simulation.restart();
-
-  // console.log(simulation.nodes());
 });
 
 // ===================== HELPER FUNCTIONS =====================
@@ -352,7 +342,6 @@ function tick(elapsed){
         // the `x` limit also controls the frequency per second
         // for (let x = 0; x < 2; x++) {
           const offset = (Math.random() * nodeRadius - nodeRadius/2);
-          // console.log(f(elapsed/1000) % f(d.freq*100) === 0);
 
           // The higher the multiplied Math.random(), the less particles (because the probability is lower that there will be a decimal smaller than the d.freq)
           if (Math.random() * 15 < d.freq) {
