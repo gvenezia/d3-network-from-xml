@@ -41,7 +41,7 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/register": "^7.0.0",
-    "ajv": "^6.6.1",
+    "ajv": "^6.12.3",
     "babel-loader": "^8.0.4",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
